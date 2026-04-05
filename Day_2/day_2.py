@@ -8,7 +8,9 @@ import numpy as np
 
 highlight_countries = [
     'Bangladesh', 'India', 'Pakistan', 'Sri Lanka', 'Nepal', 'Bhutan', 'Maldives', 'Afghanistan',
-    'China', 'United Kingdom', 'United States', 'Mexico', 'Brazil', 'South Africa', 'Nigeria', 'Australia'
+    'China', 'United Kingdom', 'United States', 'Mexico', 'Brazil', 'South Africa', 'Nigeria', 'Australia',
+    'Japan', 'Germany', 'Canada', 'Italy', 'France', 'Ghana', 'Egypt', 'Ethiopia', 'Indonesia', 'Kenya',
+    'Malaysia', 'Myanmar', 'Philippines', 'Thailand', 'Vietnam'
 ]
 
 PALETTE = {

@@ -9,7 +9,9 @@ from adjustText import adjust_text
 
 highlight_countries = [
     'Bangladesh', 'India', 'Pakistan', 'Sri Lanka', 'Nepal', 'Bhutan', 'Maldives', 'Afghanistan',
-    'China', 'Japan', 'United Kingdom', 'United States', 'Mexico', 'Brazil', 'South Africa', 'Nigeria', 'Australia'
+    'China', 'United Kingdom', 'United States', 'Mexico', 'Brazil', 'South Africa', 'Nigeria', 'Australia',
+    'Japan', 'Germany', 'Canada', 'Italy', 'France', 'Ghana', 'Egypt', 'Ethiopia', 'Indonesia', 'Kenya',
+    'Malaysia', 'Myanmar', 'Philippines', 'Thailand', 'Vietnam'
 ]
 
 # Color palette with clear visual hierarchy

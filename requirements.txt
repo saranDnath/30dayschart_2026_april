@@ -3,3 +3,6 @@ openpyxl
 matplotlib
 numpy
 adjustText
+geopandas
+pyogrio
+geodatasets

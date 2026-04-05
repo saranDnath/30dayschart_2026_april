@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as pe
 
-highlight_countries = ['Bangladesh', 'India', 'Pakistan', 'Sri Lanka', 'Nepal', 'Bhutan', 'Maldives', 'Afghanistan', 'China', 'United Kingdom', 'United States', 'Mexico', 'Brazil', 'South Africa', 'Nigeria', 'Australia']
+highlight_countries = ['Bangladesh', 'India', 'Pakistan', 'Sri Lanka', 'Nepal', 'Bhutan', 'Maldives', 'Afghanistan', 'China', 'United Kingdom', 'United States', 'Mexico', 'Brazil', 'South Africa', 'Nigeria', 'Australia', 'Japan', 'Germany', 'Canada', 'Italy', 'France', 'Ghana', 'Egypt', 'Ethiopia', 'Indonesia', 'Kenya', 'Malaysia', 'Myanmar', 'Philippines', 'Thailand', 'Vietnam']
 
 PALETTE = {
     'background':   '#F7F3EE', 'grid': '#E0D9D0', 'bar_overweight': '#E07A5F', 'bar_stunting': '#3D5A80',

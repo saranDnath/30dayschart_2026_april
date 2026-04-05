@@ -10,7 +10,7 @@ if (!file.exists(destfile)) {
   download.file("https://datasafe-h5afbhf4gwctabaa.z01.azurefd.net/api/Download/STR/BE2BEEE/2022-05-21/be2beee_20220520_0.xlsx", destfile, mode = "wb")
 }
 
-highlight_countries <- c("Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives", "Afghanistan", "China", "United Kingdom", "United States", "Mexico", "Brazil", "South Africa", "Nigeria", "Australia")
+highlight_countries <- c("Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives", "Afghanistan", "China", "United Kingdom", "United States", "Mexico", "Brazil", "South Africa", "Nigeria", "Australia", "Japan", "Germany", "Canada", "Italy", "France", "Ghana", "Egypt", "Ethiopia", "Indonesia", "Kenya", "Malaysia", "Myanmar", "Philippines", "Thailand", "Vietnam")
 
 df <- suppressWarnings(read_excel(destfile, sheet = "Annex 2-4", col_names = FALSE))
 data <- df[6:nrow(df), c(1, 2, 6)]
