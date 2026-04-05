@@ -13,10 +13,10 @@ if (!file.exists(destfile)) {
 highlight_countries <- c("Bangladesh", "India", "Pakistan", "Sri Lanka", "Nepal", "Bhutan", "Maldives", "Afghanistan", "China", "United Kingdom", "United States", "Mexico", "Brazil", "South Africa", "Nigeria", "Australia")
 
 df <- suppressWarnings(read_excel(destfile, sheet = "Annex 2-4", col_names = FALSE))
-data <- df[6:nrow(df), c(1, 2, 4)]
-colnames(data) <- c("Country", "Stunting", "Wasting")
+data <- df[6:nrow(df), c(1, 2, 6)]
+colnames(data) <- c("Country", "Stunting", "Overweight")
 data <- data %>%
-  mutate(across(c(Stunting, Wasting), as.numeric)) %>%
+  mutate(across(c(Stunting, Overweight), as.numeric)) %>%
   filter(!is.na(Stunting)) %>%
   mutate(
     ShortName = sapply(Country, function(c) {
@@ -30,14 +30,14 @@ data <- data %>%
   mutate(ShortName = factor(ShortName, levels = ShortName))
 
 plot <- ggplot(data) +
-  geom_bar(aes(x = ShortName, y = Stunting, fill = "Stunting (Chronic)"), stat = "identity", color = "white") +
-  geom_bar(aes(x = ShortName, y = -Wasting, fill = "Wasting (Acute)"), stat = "identity", color = "white") +
+  geom_bar(aes(x = ShortName, y = Stunting, fill = "Stunting"), stat = "identity", color = "white") +
+  geom_bar(aes(x = ShortName, y = -Overweight, fill = "Overweight"), stat = "identity", color = "white") +
   geom_text(aes(x = ShortName, y = Stunting, label = sprintf("%.1f%%", Stunting)), size = 3, hjust = -0.2, color = "#1A3D5C") +
-  geom_text(aes(x = ShortName, y = -Wasting, label = sprintf("%.1f%%", Wasting)), size = 3, hjust = 1.2, color = "#1A3D5C") +
-  scale_fill_manual(values = c("Stunting (Chronic)" = "#3D5A80", "Wasting (Acute)" = "#E07A5F")) +
-  coord_flip() +
+  geom_text(aes(x = ShortName, y = -Overweight, label = sprintf("%.1f%%", Overweight)), size = 3, hjust = 1.2, color = "#1A3D5C") +
+  scale_fill_manual(values = c("Stunting" = "#3D5A80", "Overweight" = "#E07A5F")) +
+  coord_flip(ylim = c(-max(data$Overweight, na.rm = T) - 15, max(data$Stunting, na.rm = T) + 10)) +
   theme_minimal() +
-  labs(title = "Childhood Malnutrition: Wasting vs Stunting", subtitle = "WHO World Health Statistics 2022  ·  % Under-5s", x = "", y = "", fill = "") +
+  labs(title = "Childhood Malnutrition: Overweight vs Stunting", subtitle = "WHO World Health Statistics 2022  ·  % Under-5s", x = "", y = "", fill = "") +
   theme(
     plot.background = element_rect(fill = "#F7F3EE", color = NA), panel.background = element_rect(fill = "#F7F3EE", color = NA),
     panel.grid.major.x = element_line(color = "#E0D9D0", linetype = "dashed", linewidth = 0.8), panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
