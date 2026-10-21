@@ -6,3 +6,11 @@ adjustText
 geopandas
 pyogrio
 geodatasets
+circlify
+seaborn
+shiny
+kagglehub
+rsconnect-python
+requests
+scipy
+python-dotenv
