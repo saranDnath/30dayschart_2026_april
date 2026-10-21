@@ -11,7 +11,7 @@ library(tidyverse)
 library(ggtext)
 
 # ── 1. Load & filter ─────────────────────────────────────────
-df <- read_csv("sugar_intake_country_wise_2018.csv")
+df <- read_csv("sugar_intake_country_wise_2018.csv.gz")
 
 data <- df |>
   filter(year == 2018, age == 999, female == 999, urban == 999, edu == 999)

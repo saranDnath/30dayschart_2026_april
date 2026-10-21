@@ -13,7 +13,7 @@ import os
 
 # ── 1. Load & filter ────────────────────────────────────────
 script_dir = os.path.dirname(os.path.abspath(__file__))
-df = pd.read_csv(os.path.join(script_dir, "sugar_intake_country_wise_2018.csv"))
+df = pd.read_csv(os.path.join(script_dir, "sugar_intake_country_wise_2018.csv.gz"))
 
 data = (
     df[
